@@ -1,0 +1,32 @@
+﻿@model Agenda.Models.Contacto
+
+@{
+    ViewData["Title"] = "Registro de Empleados";
+}
+<h2>@ViewData["Title"]</h2>
+
+<div class="container-fluid">
+    <form asp-action="registrar" asp-controller="Home">
+        <div class="row">
+            <div class="form-group col-lg-6">
+                <label>Nombre</label>
+                <input class="form-control" type="text" asp-for="nombre" required/>
+            </div>
+            <div class="form-group col-lg-6">
+                <label>Apellido</label>
+                <input class="form-control" type="text" asp-for="apellido" required/>
+            </div>
+            <div class="form-group col-lg-6">
+                <label>Email</label>
+                <input class="form-control" type="email" asp-for="email"required />
+            </div>
+            <div class="form-group col-lg-6">
+                <label>Telefono celular</label>
+                <input class="form-control" type="tel" asp-for="telCel" required/>
+            </div>
+           
+        </div>
+        <button class="btn btn-primary" type="submit">Enviar</button>
+    </form>
+
+</div>
